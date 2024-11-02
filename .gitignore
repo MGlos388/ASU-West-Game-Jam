@@ -72,3 +72,5 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 /ASU West Game Jam/Library
 /ASU West Game Jam/Temp
+/ASU West Game Jam/Logs
+/ASU West Game Jam/.vscode/
