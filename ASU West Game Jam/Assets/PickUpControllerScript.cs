@@ -10,6 +10,7 @@ public class PickUpControllerScript : MonoBehaviour
     [SerializeField] GameObject player;
 
     private bool collected = false;
+    private float timer = 0;
     void Start()
     {
         
@@ -20,13 +21,20 @@ public class PickUpControllerScript : MonoBehaviour
     {
 
         if (collected) {
-            GameObject.Destroy(gameObject);
+            timer += Time.deltaTime;
+            float distance = Vector3.Distance(transform.position, player.transform.position);
+            transform.position = Vector3.MoveTowards(transform.position,player.transform.position,Time.deltaTime*(distance+2+(timer*3)));
+            if (distance < .01f)
+            {
+                GameObject.Destroy(gameObject);
+
+                pickup.Invoke();
+            }
 
         }
 
         if (Vector3.Distance(transform.position, player.transform.position) < 1 && !collected) {
             collected = true;
-            pickup.Invoke();
             
         }
     }
