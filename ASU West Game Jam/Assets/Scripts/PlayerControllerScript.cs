@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerControllerScript : MonoBehaviour
 {
     [SerializeField] float moveSpeed;
     [SerializeField] float lerpSpeed;
@@ -48,10 +48,11 @@ public class PlayerController : MonoBehaviour
         Debug.Log(health);
     }
 
-    public void UpdateHealth() {
-        
-    
+    public void UpdateHealth(float h) {
+        health += h;
+        if (health>=maxhealth) {
+            health = maxhealth;
+        }
     }
-
 
 }
