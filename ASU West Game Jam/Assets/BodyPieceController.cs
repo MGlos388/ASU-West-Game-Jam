@@ -16,6 +16,8 @@ public class BodyPieceController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        /**
         if (Vector3.Distance(transform.position, target.transform.position) > 2)
         {
             rb.linearVelocity = (target.transform.position - transform.position).normalized*(Vector3.Distance(transform.position,target.transform.position)*2);
@@ -23,6 +25,21 @@ public class BodyPieceController : MonoBehaviour
         }
         else {
             rb.linearVelocity = Vector3.zero;
+        }
+        **/
+
+        if (Vector3.Distance(transform.position, target.transform.position) > 2)
+        {
+            
+            transform.LookAt(target.transform.position);
+
+            transform.Translate(Vector3.forward* Vector3.Distance(transform.position, target.transform.position));
+            transform.Translate(Vector3.forward* -2);
+
+        }
+        else
+        {
+            
         }
     }
 }
