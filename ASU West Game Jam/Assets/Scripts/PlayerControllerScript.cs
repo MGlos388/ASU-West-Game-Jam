@@ -14,7 +14,7 @@ public class PlayerControllerScript : MonoBehaviour
     [SerializeField] float sprintHealthDeduction;
 
     public float health;
-    public Menu_Gameplay UI;
+    public GameManager UI;
 
     public float invincibilityTime;
     private float invincibilityTime_Elapsed;
