@@ -1,4 +1,5 @@
 using DG.Tweening;
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,10 +10,21 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI HealthBar_Text;
     public TextMeshProUGUI WoodValue_Text;
     PlayerControllerScript player;
+    public RectTransform MainMenu;
 
     public void ExitGame()
     {
         Application.Quit();
+    }
+    public void SetupGame()
+    {
+        StartCoroutine(SetupGame_Coro());
+    }
+    IEnumerator SetupGame_Coro()
+    {
+        MainMenu.DOScale(0, 0.5f);
+        yield return new WaitForSeconds(0.5f);
+        MainMenu.gameObject.SetActive(false);
     }
     void Start()
     {
