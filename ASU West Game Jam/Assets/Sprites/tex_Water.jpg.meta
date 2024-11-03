@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 83e7fc3de47a7c54c80fa909e54968d5
+guid: 720cb3cce5e7689409be2dcc7e8fc91f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4667275757439446308
-    second: SBMSEnemy1_ZigZagVariation_0
+      213: -7509973125648142559
+    second: tex_Water_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SBMSEnemy1_ZigZagVariation_0
+      name: tex_Water_0
       rect:
         serializedVersion: 2
-        x: 231
-        y: 807
-        width: 614
-        height: 839
+        x: 0
+        y: 0
+        width: 1024
+        height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cd297094d618a3fb0800000000000000
-      internalID: -4667275757439446308
+      spriteID: 12f23055b3737c790800000000000000
+      internalID: -7509973125648142559
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      SBMSEnemy1_ZigZagVariation_0: -4667275757439446308
+      tex_Water_0: -7509973125648142559
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

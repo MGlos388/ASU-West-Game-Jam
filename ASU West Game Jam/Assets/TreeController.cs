@@ -23,6 +23,7 @@ public class TreeController : MonoBehaviour
 
 
             GameObject gb = Instantiate(wood,transform.position,Quaternion.identity);
+            gb.transform.rotation = Quaternion.Euler(new Vector3(0,0,Random.Range(0,360)));
             gb.tag = "Wood";
             gb.GetComponent<PickUpControllerScript>().player = GameObject.Find("Player");
 
