@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5609510688318375042}
   - component: {fileID: 6887916266725690674}
   m_Layer: 0
-  m_Name: enemy_basic_cat_0
+  m_Name: enemy_basic_var
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26,8 +26,8 @@ Transform:
   m_GameObject: {fileID: 2966262313165923676}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0.05, z: -1.1596965}
-  m_LocalScale: {x: 0.36118466, y: 0.37713894, z: 0.7028307}
+  m_LocalPosition: {x: -0, y: 0.4, z: -1.1596965}
+  m_LocalScale: {x: 0.2922273, y: 0.30513558, z: 0.56864625}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5603347840149940908}
@@ -76,8 +76,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1056194897606750863, guid: bf37adfed466c0d48aa1e2f383eff66c, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 4998052480404951874, guid: efa2b145f760ac6408905291e0e385cd, type: 3}
+  m_Color: {r: 0.9671449, g: 1, b: 0.1641509, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -96,8 +96,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5603347840149940908}
-  - component: {fileID: 8037853863573986352}
   - component: {fileID: 4094683835023212193}
+  - component: {fileID: 8932335344992385441}
   m_Layer: 0
   m_Name: EnemyBasic
   m_TagString: Enemy
@@ -121,8 +121,23 @@ Transform:
   - {fileID: 5609510688318375042}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &8037853863573986352
-BoxCollider2D:
+--- !u!114 &4094683835023212193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8269357794211929985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff550a0cd915cbb4c8235d146549fd3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  minimumFollowDistance: 1
+  maxmumFollowDistance: 8
+--- !u!58 &8932335344992385441
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -155,30 +170,5 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0.037374258}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 1, y: 1.0747485}
-  m_EdgeRadius: 0
---- !u!114 &4094683835023212193
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8269357794211929985}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff550a0cd915cbb4c8235d146549fd3a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 2
-  minimumFollowDistance: 1
-  maxmumFollowDistance: 8
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 0.5

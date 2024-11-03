@@ -29,8 +29,18 @@ public class ZigZagToPlayer : MonoBehaviour
         {
             if (player != null)
             {
+
                 // Get the direction to the player
                 Vector2 directionToPlayer = (player.position - transform.position).normalized;
+
+                /////////////////////// added for med var enemy, to rotate sprite towards player
+                var startingAngleOffset =  90;
+                // Calculate the angle to rotate towards the player
+                float angle = Mathf.Atan2(directionToPlayer.y, directionToPlayer.x) * Mathf.Rad2Deg;
+
+                // Rotate the enemy sprite to face the player
+                transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle + startingAngleOffset));
+                ///////////////////////
 
                 // Generate a random angle within the zigzag range
                 float randomAngle = Random.Range(-zigzagAngle / 2, zigzagAngle / 2);
