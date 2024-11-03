@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5603347840149940908}
   - component: {fileID: 8037853863573986352}
-  - component: {fileID: 4094683835023212193}
+  - component: {fileID: 7162495087872684698}
   m_Layer: 0
   m_Name: EnemyMed
   m_TagString: Enemy
@@ -81,7 +81,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.258467, y: 1.201177}
   m_EdgeRadius: 0
---- !u!114 &4094683835023212193
+--- !u!114 &7162495087872684698
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -90,12 +90,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 8269357794211929985}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff550a0cd915cbb4c8235d146549fd3a, type: 3}
+  m_Script: {fileID: 11500000, guid: 1f855762d8bbed345ad238ff06ba9569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
-  minimumFollowDistance: 1
-  maxmumFollowDistance: 8
+  arrowPrefab: {fileID: 0}
+  minSpeed: 2
+  maxSpeed: 5
+  minDelayTime: 1
+  maxDelayTime: 3
+  zigzagAngle: 30
 --- !u!1 &8645005526697560739
 GameObject:
   m_ObjectHideFlags: 0
