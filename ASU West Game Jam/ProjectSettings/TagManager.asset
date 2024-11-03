@@ -10,6 +10,7 @@ TagManager:
   - Wood
   - Mine
   - Projectile
+  - GameManager
   layers:
   - Default
   - TransparentFX

@@ -9,7 +9,6 @@ public class RaftManager : MonoBehaviour
 {
     [SerializeField] GameObject displaypanel;
     [SerializeField] GameObject woodcountdisplay;
-    public GameManager gameManager;
 
     GameObject player;
 
@@ -21,7 +20,6 @@ public class RaftManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
         targetScale = displaypanel.transform.localScale;
         player = GameObject.Find("Player");
         woodreq = Random.Range(10,20);
@@ -71,7 +69,6 @@ public class RaftManager : MonoBehaviour
                 }
                 else {
                     Debug.Log("not enough wood");
-                    gameManager.CantPickUpWood_SoundFX.Play();
                     woodcountdisplay.GetComponent<TextMeshPro>().color = Color.red;
                     displaypanel.transform.localScale += new Vector3(-.1f,.1f,0);
 
