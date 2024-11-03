@@ -16,7 +16,8 @@ public class PlayerControllerScript : MonoBehaviour
     public float health;
     public Menu_Gameplay UI;
 
-    private float invincibilityFrames = 30;
+    public float invincibilityTime;
+    private float invincibilityTime_Elapsed;
 
     [SerializeField] Rigidbody2D rb;
 
@@ -27,7 +28,7 @@ public class PlayerControllerScript : MonoBehaviour
     private void Start()
     {
         health = maxhealth;
-        invincibilityFrames = 0.6f;
+        invincibilityTime_Elapsed = invincibilityTime;
     }
 
     private void Update()
@@ -50,27 +51,26 @@ public class PlayerControllerScript : MonoBehaviour
 
         if (HurtingPlayer)
         {
-            invincibilityFrames -= Time.deltaTime;
-            if (invincibilityFrames <= 0)
+            invincibilityTime_Elapsed -= Time.deltaTime;
+            if (invincibilityTime_Elapsed <= 0)
             {
                 HurtingPlayer = false;
-                invincibilityFrames = 0.6f;
+                invincibilityTime_Elapsed = invincibilityTime;
             }
         }
-        Debug.Log(health);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D coll)
     {
         if (!HurtingPlayer)
         {
-            if (collision.gameObject.CompareTag("Enemy") && invincibilityFrames == 0.6f)
+            if (coll.gameObject.CompareTag("Enemy") && invincibilityTime_Elapsed == invincibilityTime)
             {
                 UI.UpdateHealth();
                 health -= 10;
                 HurtingPlayer = true;
             }
-        }  
+        }
     }
 
     public void UpdateHealth(float h) {

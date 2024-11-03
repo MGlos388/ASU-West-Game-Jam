@@ -1037,17 +1037,25 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 4119167271015520864}
+    - target: {fileID: 4094683835023212193, guid: ccabc08749e0fd4409a1b7ddde906b8a, type: 3}
+      propertyPath: maxmumFollowDistance
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4094683835023212193, guid: ccabc08749e0fd4409a1b7ddde906b8a, type: 3}
+      propertyPath: minimumFollowDistance
+      value: 1.25
+      objectReference: {fileID: 0}
     - target: {fileID: 5603347840149940908, guid: ccabc08749e0fd4409a1b7ddde906b8a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.53
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 5603347840149940908, guid: ccabc08749e0fd4409a1b7ddde906b8a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.88
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5603347840149940908, guid: ccabc08749e0fd4409a1b7ddde906b8a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.1596965
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5603347840149940908, guid: ccabc08749e0fd4409a1b7ddde906b8a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1076,6 +1084,10 @@ PrefabInstance:
     - target: {fileID: 5603347840149940908, guid: ccabc08749e0fd4409a1b7ddde906b8a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8037853863573986352, guid: ccabc08749e0fd4409a1b7ddde906b8a, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8269357794211929985, guid: ccabc08749e0fd4409a1b7ddde906b8a, type: 3}
       propertyPath: m_Name
@@ -2053,6 +2065,14 @@ PrefabInstance:
     - target: {fileID: 1000864527152283007, guid: 549b84d69dfc775479edbe0c4acb85cc, type: 3}
       propertyPath: maxhealth
       value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000864527152283007, guid: 549b84d69dfc775479edbe0c4acb85cc, type: 3}
+      propertyPath: moveSpeed
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000864527152283007, guid: 549b84d69dfc775479edbe0c4acb85cc, type: 3}
+      propertyPath: invincibilityTime
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 1000864527152283007, guid: 549b84d69dfc775479edbe0c4acb85cc, type: 3}
       propertyPath: sprintWaterDeduction
