@@ -1,6 +1,8 @@
+using System.Collections;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 using UnityEngine.SceneManagement;
 
 public class RaftManager : MonoBehaviour
@@ -34,6 +36,21 @@ public class RaftManager : MonoBehaviour
             Mathf.Lerp(woodcountdisplay.GetComponent<TextMeshPro>().color.g, 1, .01f),
             Mathf.Lerp(woodcountdisplay.GetComponent<TextMeshPro>().color.b, 1, .01f));
 
+
+        if (raftbuilt) {
+            if (Vector3.Distance(transform.position, player.transform.position) < 2) {
+                if (GameObject.Find("outeredge")) {
+                    StartCoroutine(endfunction());
+                    GameObject.Find("outeredge").SetActive(false);
+                }
+                player.GetComponent<EnemyControllerScript>().stop();
+                transform.position *= 1.0001f;
+                player.transform.Translate((transform.position-player.transform.position)/40);
+                player.GetComponentInChildren<Light2D>().intensity -= Time.deltaTime/10;
+            }
+        
+        }
+
         if (Vector3.Distance(player.transform.position, transform.position) < 4 && !raftbuilt)
         {
             displaypanel.transform.localScale = new Vector3(Mathf.Lerp(displaypanel.transform.localScale.x,targetScale.x,.1f),
@@ -45,8 +62,9 @@ public class RaftManager : MonoBehaviour
                 {
                     player.GetComponent<PlayerControllerScript>().woodcount-=woodreq;
                     raftbuilt = true;
+                    GetComponentInChildren<BoxCollider2D>().enabled = false;
                     Debug.Log("you win");
-                    SceneManager.LoadScene("EndScene");
+                    //SceneManager.LoadScene("EndScene");
 
                 }
                 else {
@@ -66,5 +84,10 @@ public class RaftManager : MonoBehaviour
                     Mathf.Lerp(displaypanel.transform.localScale.z, targetScale.z, .1f));
 
         }
+    }
+
+    IEnumerator endfunction() {
+        yield return new WaitForSeconds(12);
+        SceneManager.LoadScene("EndScene");
     }
 }

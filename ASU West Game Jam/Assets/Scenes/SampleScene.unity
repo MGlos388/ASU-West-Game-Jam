@@ -48780,8 +48780,24 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7888373936512150712, guid: 549b84d69dfc775479edbe0c4acb85cc, type: 3}
+      propertyPath: m_ShadowSoftness
+      value: 0.456
+      objectReference: {fileID: 0}
+    - target: {fileID: 7888373936512150712, guid: 549b84d69dfc775479edbe0c4acb85cc, type: 3}
+      propertyPath: m_ShadowsEnabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7888373936512150712, guid: 549b84d69dfc775479edbe0c4acb85cc, type: 3}
+      propertyPath: m_ShadowIntensity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7888373936512150712, guid: 549b84d69dfc775479edbe0c4acb85cc, type: 3}
       propertyPath: m_FalloffIntensity
       value: 0.529
+      objectReference: {fileID: 0}
+    - target: {fileID: 7888373936512150712, guid: 549b84d69dfc775479edbe0c4acb85cc, type: 3}
+      propertyPath: m_LightVolumeEnabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7888373936512150712, guid: 549b84d69dfc775479edbe0c4acb85cc, type: 3}
       propertyPath: m_PointLightInnerAngle
@@ -48794,6 +48810,30 @@ PrefabInstance:
     - target: {fileID: 7888373936512150712, guid: 549b84d69dfc775479edbe0c4acb85cc, type: 3}
       propertyPath: m_PointLightOuterRadius
       value: 6.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 7888373936512150712, guid: 549b84d69dfc775479edbe0c4acb85cc, type: 3}
+      propertyPath: m_ShadowVolumeIntensity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7888373936512150712, guid: 549b84d69dfc775479edbe0c4acb85cc, type: 3}
+      propertyPath: m_LocalBounds.m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7888373936512150712, guid: 549b84d69dfc775479edbe0c4acb85cc, type: 3}
+      propertyPath: m_LocalBounds.m_Center.y
+      value: -0.00000011920929
+      objectReference: {fileID: 0}
+    - target: {fileID: 7888373936512150712, guid: 549b84d69dfc775479edbe0c4acb85cc, type: 3}
+      propertyPath: m_LocalBounds.m_Extent.x
+      value: 0.9985302
+      objectReference: {fileID: 0}
+    - target: {fileID: 7888373936512150712, guid: 549b84d69dfc775479edbe0c4acb85cc, type: 3}
+      propertyPath: m_LocalBounds.m_Extent.y
+      value: 0.99853027
+      objectReference: {fileID: 0}
+    - target: {fileID: 7888373936512150712, guid: 549b84d69dfc775479edbe0c4acb85cc, type: 3}
+      propertyPath: m_ShadowVolumeIntensityEnabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
