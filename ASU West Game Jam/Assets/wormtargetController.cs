@@ -14,15 +14,10 @@ public class wormtargetController : MonoBehaviour
     void Update()
     {
 
-        if (Vector3.Distance(transform.position, target.transform.position) < 5)
-        {
-            transform.position = (transform.position-target.transform.position).normalized * 10;
+
+        if (Vector3.Distance(transform.position, target.transform.position) < 5) {
+            transform.position = Random.insideUnitCircle * 30;
         }
-
-
-        //if () {
-        //    transform.position = Random.insideUnitCircle * 30;
-        //}
 
 
     }
