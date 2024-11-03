@@ -3,7 +3,7 @@ using System.Collections; // Required for IEnumerator
 
 public class ZigZagToPlayer : MonoBehaviour
 {
-    public Transform player;                  // Reference to the player's Transform
+    private Transform player;                  // Reference to the player's Transform
     public GameObject arrowPrefab;            // Arrow prefab to show direction
 
     public float minSpeed = 2f;               // Minimum movement speed
@@ -17,7 +17,9 @@ public class ZigZagToPlayer : MonoBehaviour
     private float delayTime;                  // Current random delay time
 
     private void Start()
-    {
+    {     
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+ 
         StartCoroutine(ZigZagMovement());
     }
 

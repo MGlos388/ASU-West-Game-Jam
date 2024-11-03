@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class EnemyFollowPlayer : MonoBehaviour
 {
-    public Transform player;      // Reference to the player's position
+    private Transform player;      // Reference to the player's position
     public float speed = 2f;      // Speed at which the enemy follows
-    public float minimumFollowDistance;
-    public float maxmumFollowDistance;
+    public float minimumFollowDistance = 1;
+    public float maxmumFollowDistance = 8;
 
     public void Start()
     {
