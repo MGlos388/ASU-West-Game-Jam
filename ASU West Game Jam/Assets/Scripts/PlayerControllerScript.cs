@@ -9,22 +9,26 @@ public class PlayerControllerScript : MonoBehaviour
     [SerializeField] float lerpSpeed;
     [SerializeField] float runSpeed;
 
-    [SerializeField] float maxhealth;
+    public float maxhealth;
     [SerializeField] float maxwater;
     [SerializeField] float sprintHealthDeduction;
 
-    private float health;
+    public float health;
+    public Menu_Gameplay UI;
 
-    private float invincibilityFrames = 30;
+    public float invincibilityTime;
+    private float invincibilityTime_Elapsed;
 
     [SerializeField] Rigidbody2D rb;
 
     public Vector2 moveInput;
     public bool running;
+    bool HurtingPlayer;
 
     private void Start()
     {
         health = maxhealth;
+        invincibilityTime_Elapsed = invincibilityTime;
     }
 
     private void Update()
@@ -41,28 +45,32 @@ public class PlayerControllerScript : MonoBehaviour
         if (running && health>0 && moveInput!=Vector2.zero) {
             movetarget *= runSpeed;
             health -= sprintHealthDeduction;
-
-
          }
 
         rb.linearVelocity = Vector2.Lerp(rb.linearVelocity,movetarget,lerpSpeed);
 
-        Debug.Log(health);
+        if (HurtingPlayer)
+        {
+            invincibilityTime_Elapsed -= Time.deltaTime;
+            if (invincibilityTime_Elapsed <= 0)
+            {
+                HurtingPlayer = false;
+                invincibilityTime_Elapsed = invincibilityTime;
+            }
+        }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter2D(Collider2D coll)
     {
-        if (collision.gameObject.tag == "Enemy" && invincibilityFrames < 0)
+        if (!HurtingPlayer)
         {
-            invincibilityFrames = 30;
-            health -= 10;
-
-
+            if (coll.gameObject.CompareTag("Enemy") && invincibilityTime_Elapsed == invincibilityTime)
+            {
+                UI.UpdateHealth();
+                health -= 10;
+                HurtingPlayer = true;
+            }
         }
-        else {
-            invincibilityFrames -= Time.deltaTime;
-        }
-    
     }
 
     public void UpdateHealth(float h) {

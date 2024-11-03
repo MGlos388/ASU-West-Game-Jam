@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 1db1d8fbc46e4344782cf8ddbdaa9eab
+guid: bf37adfed466c0d48aa1e2f383eff66c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4792175436526584353
-    second: 10-Things-To-Know-About-Red_Square-ETIC-Hotels_0
+      213: -1056194897606750863
+    second: enemy_basic_cat_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,17 +96,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 10-Things-To-Know-About-Red_Square-ETIC-Hotels_0
+      name: enemy_basic_cat_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 2048
-        height: 2048
+        x: 46
+        y: 49
+        width: 264
+        height: 285
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fddfa7c94d5ce7db0800000000000000
-      internalID: -4792175436526584353
+      spriteID: 17dc19a2654a751f0800000000000000
+      internalID: -1056194897606750863
       vertices: []
       indices: 
       edges: []
@@ -135,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      10-Things-To-Know-About-Red_Square-ETIC-Hotels_0: -4792175436526584353
+      enemy_basic_cat_0: -1056194897606750863
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

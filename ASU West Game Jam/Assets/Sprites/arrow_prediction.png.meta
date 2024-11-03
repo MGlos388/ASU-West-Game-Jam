@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 1db1d8fbc46e4344782cf8ddbdaa9eab
+guid: 57fe61a2c9c58ba4ab647fa759a2ae43
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4792175436526584353
-    second: 10-Things-To-Know-About-Red_Square-ETIC-Hotels_0
+      213: -5374188406140824995
+    second: arrow_prediction_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 10-Things-To-Know-About-Red_Square-ETIC-Hotels_0
+      name: arrow_prediction_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 2048
-        height: 2048
+        x: 7
+        y: 9
+        width: 79
+        height: 46
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fddfa7c94d5ce7db0800000000000000
-      internalID: -4792175436526584353
+      spriteID: d5214f74e1c0b65b0800000000000000
+      internalID: -5374188406140824995
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      10-Things-To-Know-About-Red_Square-ETIC-Hotels_0: -4792175436526584353
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
