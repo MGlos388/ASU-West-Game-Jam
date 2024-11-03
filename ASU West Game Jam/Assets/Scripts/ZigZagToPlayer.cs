@@ -14,12 +14,17 @@ public class ZigZagToPlayer : MonoBehaviour
 
     private GameObject currentArrow;          // Instance of the arrow
     private float speed;                      // Current random speed
-    private float delayTime;                  // Current random delay time
-
+    private float delayTime;                  // Current random delay time    
+    private Animator animator;
     private void Start()
     {     
         player = GameObject.FindGameObjectWithTag("Player").transform;
- 
+        Transform childTransform = transform.Find("SBMSEnemy1_ZigZagVariation");
+        if (childTransform != null)
+        {
+            animator = childTransform.GetComponent<Animator>();           
+        }
+
         StartCoroutine(ZigZagMovement());
     }
 
@@ -58,7 +63,9 @@ public class ZigZagToPlayer : MonoBehaviour
                 // Move in the zigzag direction for a short duration
                 float moveDuration = delayTime;
                 float elapsedTime = 0f;
-
+ 
+                if (animator != null)
+                    animator.enabled = true; // disable animation when moving
                 while (elapsedTime < moveDuration)
                 {
                     transform.position += (Vector3)(zigzagDirection * speed * Time.deltaTime);
@@ -67,6 +74,8 @@ public class ZigZagToPlayer : MonoBehaviour
                 }
             }
 
+            if (animator != null)
+                animator.enabled = false; // Enable animation when moving
             // Wait for the random delay time before the next zigzag movement
             yield return new WaitForSeconds(delayTime);
         }
