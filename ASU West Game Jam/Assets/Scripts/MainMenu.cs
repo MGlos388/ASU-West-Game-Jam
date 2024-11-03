@@ -8,6 +8,9 @@ using UnityEngine.UI;
 public class MainMenu : MonoBehaviour
 {
     public GameObject CurrentEventSystem;
+    public TextMeshProUGUI FrameRateNumber;
+    public Slider FrameRateSlider;
+    public Toggle FullscreenToggle;
     public Slider LoadingBar;
     public TextMeshProUGUI LoadingBar_Percentage;
     public TMP_Dropdown ResolutionDropdown;
@@ -22,21 +25,22 @@ public class MainMenu : MonoBehaviour
     {
         Application.Quit();
     }
+    public void Menu_Open(RectTransform menuToOpen)
+    {
+        menuToOpen.DOScale(1, 0.25f).SetAutoKill(true).SetUpdate(UpdateType.Normal, true);
+    }
+    public void Menu_Close(RectTransform menuToclose)
+    {
+        menuToclose.DOScale(0, 0.25f).SetAutoKill(true).SetUpdate(UpdateType.Normal, true);
+    }
+    public void SetFrameRate(Slider frameRateSlider)
+    {
+        Application.targetFrameRate = Mathf.RoundToInt(frameRateSlider.value);
+        FrameRateNumber.text = frameRateSlider.value.ToString();
+    }
     public void SetResolution()
     {
-        int width = int.Parse(ResolutionDropdown.options[ResolutionDropdown.value].text.Substring(0, 4));
-        int height = int.Parse(ResolutionDropdown.options[ResolutionDropdown.value].text.Substring(5));
-        PlayerPrefs.SetInt("Resolution1", width);
-        PlayerPrefs.SetInt("Resolution2", height);
-
-        if (PlayerPrefs.GetInt("Fullscreen") == 0)
-        {
-            Screen.SetResolution(width, height, false);
-        }
-        else
-        {
-            Screen.SetResolution(width, height, true);
-        }
+        ToggleFullscreen();
     }
     public void SetScene(string SceneName)
     {
@@ -61,6 +65,47 @@ public class MainMenu : MonoBehaviour
     }
     public void Start()
     {
+        if (!PlayerPrefs.HasKey("BootedBefore"))
+        {
+            PlayerPrefs.SetInt("Resolution1", 1920);
+            PlayerPrefs.SetInt("Resolution2", 1080);
+            PlayerPrefs.SetInt("Fulllscreen", 1);
+            PlayerPrefs.SetInt("FrameRate", 60);
+        }
         VersionText.text = "v" + Application.version;
+        if (PlayerPrefs.HasKey("Resolution1"))
+        {
+            if (PlayerPrefs.GetInt("Fullscreen") == 0)
+            {
+                Screen.SetResolution(PlayerPrefs.GetInt("Resolution1"), PlayerPrefs.GetInt("Resolution2"), true);
+            }
+            else
+            {
+                Screen.SetResolution(PlayerPrefs.GetInt("Resolution1"), PlayerPrefs.GetInt("Resolution2"), false);
+            }
+        }
+        else
+        {
+            Screen.SetResolution(1920, 1080, true);
+        }
+        
+        FrameRateNumber.text = PlayerPrefs.GetInt("FrameRate").ToString();
+        FrameRateSlider.value = PlayerPrefs.GetInt("FrameRate");
+    }
+    public void ToggleFullscreen()
+    {
+        int width = int.Parse(ResolutionDropdown.options[ResolutionDropdown.value].text.Substring(0, 4));
+        int height = int.Parse(ResolutionDropdown.options[ResolutionDropdown.value].text.Substring(5));
+        PlayerPrefs.SetInt("Resolution1", width);
+        PlayerPrefs.SetInt("Resolution2", height);
+
+        if (FullscreenToggle.isOn)
+        {
+            Screen.SetResolution(width, height, true);
+        }
+        else
+        {
+            Screen.SetResolution(width, height, false);
+        }
     }
 }
