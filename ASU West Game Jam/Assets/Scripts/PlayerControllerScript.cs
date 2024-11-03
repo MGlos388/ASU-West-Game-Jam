@@ -15,7 +15,7 @@ public class PlayerControllerScript : MonoBehaviour
 
     private float health;
 
-    private float invincibilityFrames = 30;
+    private float invincibilityFrames = 0;
 
     [SerializeField] Rigidbody2D rb;
 
@@ -52,7 +52,8 @@ public class PlayerControllerScript : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Enemy" && invincibilityFrames < 0)
+        Debug.Log("you collided entered");
+        if (collision.gameObject.tag == "Enemy" && invincibilityFrames <= 0)
         {
             invincibilityFrames = 30;
             health -= 10;
