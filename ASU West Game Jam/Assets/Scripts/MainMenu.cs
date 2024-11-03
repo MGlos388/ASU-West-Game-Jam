@@ -10,8 +10,9 @@ public class MainMenu : MonoBehaviour
     public GameObject CurrentEventSystem;
     public Slider LoadingBar;
     public TextMeshProUGUI LoadingBar_Percentage;
-    public TextMeshProUGUI VersionText;
+    public TMP_Dropdown ResolutionDropdown;
     public RectTransform SceneTransitionImage;
+    public TextMeshProUGUI VersionText;
 
     public void Credits_Link(string siteToOpen)
     {
@@ -20,6 +21,22 @@ public class MainMenu : MonoBehaviour
     public void ExitGame()
     {
         Application.Quit();
+    }
+    public void SetResolution()
+    {
+        int width = int.Parse(ResolutionDropdown.options[ResolutionDropdown.value].text.Substring(0, 4));
+        int height = int.Parse(ResolutionDropdown.options[ResolutionDropdown.value].text.Substring(5));
+        PlayerPrefs.SetInt("Resolution1", width);
+        PlayerPrefs.SetInt("Resolution2", height);
+
+        if (PlayerPrefs.GetInt("Fullscreen") == 0)
+        {
+            Screen.SetResolution(width, height, false);
+        }
+        else
+        {
+            Screen.SetResolution(width, height, true);
+        }
     }
     public void SetScene(string SceneName)
     {
