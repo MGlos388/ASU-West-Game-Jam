@@ -43,7 +43,7 @@ public class ZigZagToPlayer : MonoBehaviour
                 delayTime = Random.Range(minDelayTime, maxDelayTime);
 
                 // Draw or update the arrow in the zigzag direction
-                DrawArrow(zigzagDirection);
+                //not working atm //DrawArrow(zigzagDirection);
 
                 // Move in the zigzag direction for a short duration
                 float moveDuration = delayTime;
@@ -62,6 +62,7 @@ public class ZigZagToPlayer : MonoBehaviour
         }
     }
   
+    // not working atm
     private void DrawArrow(Vector2 direction)
     {
         // if unassigned, don't draw

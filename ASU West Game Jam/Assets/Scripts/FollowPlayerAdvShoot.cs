@@ -62,14 +62,5 @@ public class FollowPlayerAdvShoot : MonoBehaviour
             projectile.GetComponent<SpriteRenderer>().color = Color.green;
         }
     }  
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        // Check if collided with the player
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            Debug.Log("Adv Enemy collided with Player!");
-            // Here you can add more behavior, such as dealing damage, etc.
-        }
-    }
+ 
 }
