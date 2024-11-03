@@ -30,8 +30,8 @@ public class GameManager : MonoBehaviour
     public void UpdateHealth()
     {
         HealthBar.maxValue = player.maxhealth;
-        HealthBar.DOValue(player.health, 0.33f);
-        HealthBar_Text.text = player.health.ToString() + "/" + player.maxhealth.ToString();
+        HealthBar.DOValue((int)player.health, 0.33f);
+        HealthBar_Text.text = ((int)player.health).ToString() + "/" + ((int)player.maxhealth).ToString();
     }
 
     public void UpdateWood() {

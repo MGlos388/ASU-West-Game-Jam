@@ -4,6 +4,8 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
+using UnityEngine.SceneManagement;
 
 public class PlayerControllerScript : MonoBehaviour
 {
@@ -27,12 +29,16 @@ public class PlayerControllerScript : MonoBehaviour
     public Vector2 moveInput;
     public bool running;
     bool HurtingPlayer;
+    bool dead = false;
 
     [SerializeField] public int woodcount = 0;
 
     private Animator animator;
     private SpriteRenderer spriteRenderer;
     private Vector2 movement;
+
+    [SerializeField] GameObject deathscreen;
+
 
     private void Start()
     {
@@ -44,14 +50,27 @@ public class PlayerControllerScript : MonoBehaviour
 
         health = maxhealth;
         invincibilityTime_Elapsed = invincibilityTime;
+
     }
 
     private void Update()
     {
-        moveInput.x = Input.GetAxisRaw("Horizontal");
-        moveInput.y = Input.GetAxisRaw("Vertical");
 
-        running = Input.GetKey(KeyCode.Z);
+        spriteRenderer.color = new Color(Mathf.Lerp(
+            spriteRenderer.color.r, 1, .01f),
+            Mathf.Lerp(spriteRenderer.color.g, 1, .01f),
+            Mathf.Lerp(spriteRenderer.color.b, 1, .01f));
+
+        if (!dead)
+        {
+            moveInput.x = Input.GetAxisRaw("Horizontal");
+            moveInput.y = Input.GetAxisRaw("Vertical");
+
+            running = Input.GetKey(KeyCode.Z);
+        }
+        else {
+            moveInput = Vector2.zero;
+        }
 
 
         moveInput.Normalize();
@@ -78,7 +97,7 @@ public class PlayerControllerScript : MonoBehaviour
         if (running && health > 0 && moveInput != Vector2.zero)
         {
             movetarget *= runSpeed;
-            health -= sprintHealthDeduction;
+            UpdateHealth(-sprintHealthDeduction);
         }
 
         rb.linearVelocity = Vector2.Lerp(rb.linearVelocity, movetarget, lerpSpeed);
@@ -92,19 +111,37 @@ public class PlayerControllerScript : MonoBehaviour
                 invincibilityTime_Elapsed = invincibilityTime;
             }
         }
+
+        if (health <= 0&&!dead) {
+            dead = true;
+            StartCoroutine(death());
+        }
+
+        if (health <= 0) {
+            health= 0;
+            GetComponentInChildren<Light2D>().intensity -= Time.deltaTime / 3;
+            deathscreen.transform.localScale = Vector3.Lerp(deathscreen.transform.localScale,Vector3.one*2,Time.deltaTime*2);
+
+        }
+    }
+
+    IEnumerator death() {
+        yield return new WaitForSeconds(3);
+        SceneManager.LoadScene("Jordan_Gameplay");
+    
     }
     public void PopUpNumber(string textToShow)
     {
-        StartCoroutine(PopUpNumber_Coro(transform.position + new Vector3(0, 2), textToShow));
+        StartCoroutine(PopUpNumber_Coro(transform.position + new Vector3(0, 2), textToShow,.5f));
     }
-    IEnumerator PopUpNumber_Coro(Vector2 position, string textToShow)
+    IEnumerator PopUpNumber_Coro(Vector2 position, string textToShow, float duration)
     {
         GameObject popup = Instantiate(PopUpPrefab, transform.position, Quaternion.identity);
         popup.GetComponent<TextMeshPro>().text = textToShow;
         yield return new WaitForEndOfFrame();
         popup.GetComponent<TextMeshPro>().color = new Color32(255, 255, 255, 255);
         popup.transform.DOMove(position, 0.33f).SetEase(Ease.OutExpo);
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(duration);
         popup.GetComponent<TextMeshPro>().DOFade(0, 0.15f);
         Destroy(popup, 0.5f);
     }
@@ -117,12 +154,14 @@ public class PlayerControllerScript : MonoBehaviour
             {
                 if (coll.gameObject.CompareTag("Enemy"))
                 {
+                    spriteRenderer.color = Color.red;
                     UpdateHealth(-10);
                     HurtingPlayer = true;
                     PopUpNumber("-10");
                 }
                 else if (coll.gameObject.CompareTag("Projectile"))
                 {
+                    spriteRenderer.color = Color.red;
                     Destroy(coll.gameObject); // for projectiles and mines, destroy them after a hit
                     UpdateHealth(-5); //errors if no healthbar, destroy obj first
                     HurtingPlayer = true;
@@ -130,6 +169,7 @@ public class PlayerControllerScript : MonoBehaviour
                 }
                 else if (coll.gameObject.CompareTag("Mine"))
                 {
+                    spriteRenderer.color = Color.red;
                     Destroy(coll.gameObject);
                     UpdateHealth(-15);
                     HurtingPlayer = true;
