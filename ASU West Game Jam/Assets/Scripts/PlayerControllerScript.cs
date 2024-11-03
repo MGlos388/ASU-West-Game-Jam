@@ -28,7 +28,7 @@ public class PlayerControllerScript : MonoBehaviour
     public bool running;
     bool HurtingPlayer;
 
-    public int woodcount = 0;
+    [SerializeField] public int woodcount = 0;
 
     private Animator animator;
     private SpriteRenderer spriteRenderer;
