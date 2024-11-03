@@ -127,7 +127,7 @@ public class PlayerControllerScript : MonoBehaviour
 
     IEnumerator death() {
         yield return new WaitForSeconds(3);
-        SceneManager.LoadScene("Jordan_Gameplay");
+        SceneManager.LoadScene("MainMenu");
     
     }
     public void PopUpNumber(string textToShow)
@@ -182,6 +182,7 @@ public class PlayerControllerScript : MonoBehaviour
         {
             UpdateHealth(10);
             Debug.Log("health");
+            coll.gameObject.GetComponent<AudioSource>().Play();
             GameObject.Destroy(coll.gameObject);
         }
         if (coll.gameObject.CompareTag("Wood"))

@@ -69,6 +69,7 @@ public class RaftManager : MonoBehaviour
                 }
                 else {
                     Debug.Log("not enough wood");
+                    GetComponent<AudioSource>().Play();
                     woodcountdisplay.GetComponent<TextMeshPro>().color = Color.red;
                     displaypanel.transform.localScale += new Vector3(-.1f,.1f,0);
 
