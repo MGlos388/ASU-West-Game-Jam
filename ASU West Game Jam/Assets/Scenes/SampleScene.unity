@@ -2505,54 +2505,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5761942073753505148, guid: 0070829e7ddddd24db071e1dcd67d639, type: 3}
   m_PrefabInstance: {fileID: 71495183}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &76293718
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 76293720}
-  - component: {fileID: 76293719}
-  m_Layer: 0
-  m_Name: MenuManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &76293719
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 76293718}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82c621d622f3ba34d8f35fb85a1301c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CurrentEventSystem: {fileID: 1130318063}
-  LoadingBar: {fileID: 0}
-  LoadingBar_Percentage: {fileID: 0}
-  SceneTransitionImage: {fileID: 0}
---- !u!4 &76293720
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 76293718}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &76293778
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6301,6 +6253,7 @@ MonoBehaviour:
   - {fileID: 8269357794211929985, guid: ccabc08749e0fd4409a1b7ddde906b8a, type: 3}
   - {fileID: 8269357794211929985, guid: af45c1711786dc7428bf87251185ecd2, type: 3}
   - {fileID: 4670509149108779114, guid: e24b424fc81738740b768f160d5c62dd, type: 3}
+  - {fileID: 8741686733375940204, guid: df7f8b80be2d5c040a33ac8a65cec92e, type: 3}
   spawncap: 8
   spawndistance: 15
   despawndistance: 25
@@ -48646,6 +48599,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 2146607934}
   target: {fileID: 1117326664}
+  food: {fileID: 6712800427832044317, guid: 9ca5cb429638b524983faed434630228, type: 3}
   movespeed: 3
   lerpamount: 1
 --- !u!4 &2146607933
@@ -48842,6 +48796,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 654245194}
     - target: {fileID: 1000864527152283007, guid: 549b84d69dfc775479edbe0c4acb85cc, type: 3}
+      propertyPath: health
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000864527152283007, guid: 549b84d69dfc775479edbe0c4acb85cc, type: 3}
       propertyPath: maxwater
       value: 100
       objectReference: {fileID: 0}
@@ -48856,6 +48814,14 @@ PrefabInstance:
     - target: {fileID: 1000864527152283007, guid: 549b84d69dfc775479edbe0c4acb85cc, type: 3}
       propertyPath: moveSpeed
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000864527152283007, guid: 549b84d69dfc775479edbe0c4acb85cc, type: 3}
+      propertyPath: PopUpPrefab
+      value: 
+      objectReference: {fileID: 8358504915506590516, guid: dd69b2998c7c6954f80f3b2cbb9fef8e, type: 3}
+    - target: {fileID: 1000864527152283007, guid: 549b84d69dfc775479edbe0c4acb85cc, type: 3}
+      propertyPath: invincibilityTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1000864527152283007, guid: 549b84d69dfc775479edbe0c4acb85cc, type: 3}
       propertyPath: sprintWaterDeduction
@@ -48900,6 +48866,14 @@ PrefabInstance:
     - target: {fileID: 4620785719959499250, guid: 549b84d69dfc775479edbe0c4acb85cc, type: 3}
       propertyPath: m_Offset.x
       value: -0.022331476
+      objectReference: {fileID: 0}
+    - target: {fileID: 4620785719959499250, guid: 549b84d69dfc775479edbe0c4acb85cc, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4620785719959499250, guid: 549b84d69dfc775479edbe0c4acb85cc, type: 3}
+      propertyPath: m_UsedByEffector
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7888373936512150712, guid: 549b84d69dfc775479edbe0c4acb85cc, type: 3}
       propertyPath: m_Intensity
@@ -48996,7 +48970,6 @@ SceneRoots:
   - {fileID: 975752163}
   - {fileID: 1117326666}
   - {fileID: 1295598047}
-  - {fileID: 76293720}
   - {fileID: 1130318066}
   - {fileID: 654245193}
   - {fileID: 226159833}
