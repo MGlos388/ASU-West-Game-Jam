@@ -1,0 +1,481 @@
+fileFormatVersion: 2
+guid: c3f7a9e7a7087e649ba1d7816eaf2eeb
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3481199384656965492
+    second: SBMSGiantWorm4_0
+  - first:
+      213: -835945238938129219
+    second: SBMSGiantWorm4_1
+  - first:
+      213: -3338205388660431190
+    second: SBMSGiantWorm4_2
+  - first:
+      213: -1760314742175013212
+    second: SBMSGiantWorm4_3
+  - first:
+      213: -5422017891463763642
+    second: SBMSGiantWorm4_4
+  - first:
+      213: -3669521503752774336
+    second: SBMSGiantWorm4_5
+  - first:
+      213: -2490521824319932851
+    second: SBMSGiantWorm4_6
+  - first:
+      213: 2187543157717601958
+    second: SBMSGiantWorm4_7
+  - first:
+      213: 7606368565773817480
+    second: SBMSGiantWorm4_8
+  - first:
+      213: -6925665887654342802
+    second: SBMSGiantWorm4_9
+  - first:
+      213: 8086613765171148497
+    second: SBMSGiantWorm4_10
+  - first:
+      213: -5257350991153849386
+    second: SBMSGiantWorm4_11
+  - first:
+      213: 394556140464752935
+    second: SBMSGiantWorm4_12
+  - first:
+      213: -8412350371602614657
+    second: SBMSGiantWorm4_13
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SBMSGiantWorm4_0
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 1487
+        width: 108
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47f69ca6564bf4030800000000000000
+      internalID: 3481199384656965492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SBMSGiantWorm4_1
+      rect:
+        serializedVersion: 2
+        x: 1053
+        y: 1569
+        width: 54
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbce965fb302664f0800000000000000
+      internalID: -835945238938129219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SBMSGiantWorm4_2
+      rect:
+        serializedVersion: 2
+        x: 1113
+        y: 1487
+        width: 108
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa6a995b2ef4ca1d0800000000000000
+      internalID: -3338205388660431190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SBMSGiantWorm4_3
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 1462
+        width: 54
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a666cb811b1297e0800000000000000
+      internalID: -1760314742175013212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SBMSGiantWorm4_4
+      rect:
+        serializedVersion: 2
+        x: 965
+        y: 1437
+        width: 59
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6496d7d647f11c4b0800000000000000
+      internalID: -5422017891463763642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SBMSGiantWorm4_5
+      rect:
+        serializedVersion: 2
+        x: 1136
+        y: 1437
+        width: 59
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04d982162ad331dc0800000000000000
+      internalID: -3669521503752774336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SBMSGiantWorm4_6
+      rect:
+        serializedVersion: 2
+        x: 1817
+        y: 1462
+        width: 54
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d467d0c9893ef6dd0800000000000000
+      internalID: -2490521824319932851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SBMSGiantWorm4_7
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 1325
+        width: 30
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ae089e69e6bb5e10800000000000000
+      internalID: 2187543157717601958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SBMSGiantWorm4_8
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 110
+        width: 1954
+        height: 1333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88655a909ef3f8960800000000000000
+      internalID: 7606368565773817480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SBMSGiantWorm4_9
+      rect:
+        serializedVersion: 2
+        x: 2057
+        y: 1325
+        width: 30
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6f8255a19713ef90800000000000000
+      internalID: -6925665887654342802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SBMSGiantWorm4_10
+      rect:
+        serializedVersion: 2
+        x: 1570
+        y: 205
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d67fccef5c693070800000000000000
+      internalID: 8086613765171148497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SBMSGiantWorm4_11
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 40
+        width: 12
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6db1ab0d0232a07b0800000000000000
+      internalID: -5257350991153849386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SBMSGiantWorm4_12
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 58
+        width: 55
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 729c95428beb97500800000000000000
+      internalID: 394556140464752935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SBMSGiantWorm4_13
+      rect:
+        serializedVersion: 2
+        x: 853
+        y: 53
+        width: 73
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f76308658e3514b80800000000000000
+      internalID: -8412350371602614657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      SBMSGiantWorm4_0: 3481199384656965492
+      SBMSGiantWorm4_1: -835945238938129219
+      SBMSGiantWorm4_10: 8086613765171148497
+      SBMSGiantWorm4_11: -5257350991153849386
+      SBMSGiantWorm4_12: 394556140464752935
+      SBMSGiantWorm4_13: -8412350371602614657
+      SBMSGiantWorm4_2: -3338205388660431190
+      SBMSGiantWorm4_3: -1760314742175013212
+      SBMSGiantWorm4_4: -5422017891463763642
+      SBMSGiantWorm4_5: -3669521503752774336
+      SBMSGiantWorm4_6: -2490521824319932851
+      SBMSGiantWorm4_7: 2187543157717601958
+      SBMSGiantWorm4_8: 7606368565773817480
+      SBMSGiantWorm4_9: -6925665887654342802
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

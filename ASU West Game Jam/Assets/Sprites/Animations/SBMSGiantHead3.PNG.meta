@@ -1,0 +1,592 @@
+fileFormatVersion: 2
+guid: fbc7b371b1eb11643a5ff89b0286233a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8775003039128240008
+    second: SBMSGiantHead3_0
+  - first:
+      213: -8196032390067697682
+    second: SBMSGiantHead3_1
+  - first:
+      213: -8291073301642115589
+    second: SBMSGiantHead3_2
+  - first:
+      213: -3328423944055088175
+    second: SBMSGiantHead3_3
+  - first:
+      213: -4834151802607000855
+    second: SBMSGiantHead3_4
+  - first:
+      213: -2287214009066565424
+    second: SBMSGiantHead3_5
+  - first:
+      213: 2923582638374921973
+    second: SBMSGiantHead3_6
+  - first:
+      213: -1647295062006955997
+    second: SBMSGiantHead3_7
+  - first:
+      213: 6280729877025939337
+    second: SBMSGiantHead3_8
+  - first:
+      213: 6584872872682814450
+    second: SBMSGiantHead3_9
+  - first:
+      213: -8145473080589764941
+    second: SBMSGiantHead3_10
+  - first:
+      213: 2967608358907312193
+    second: SBMSGiantHead3_11
+  - first:
+      213: -4597125718515296417
+    second: SBMSGiantHead3_12
+  - first:
+      213: 6675972587130914775
+    second: SBMSGiantHead3_13
+  - first:
+      213: -2342365245683640627
+    second: SBMSGiantHead3_14
+  - first:
+      213: 6603726349619524870
+    second: SBMSGiantHead3_15
+  - first:
+      213: 5334755570079669487
+    second: SBMSGiantHead3_16
+  - first:
+      213: 6066507473690076964
+    second: SBMSGiantHead3_17
+  - first:
+      213: -4047309251465577874
+    second: SBMSGiantHead3_18
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SBMSGiantHead3_0
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 128
+        width: 1490
+        height: 1241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88f363aa5c217c970800000000000000
+      internalID: 8775003039128240008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SBMSGiantHead3_1
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 1365
+        width: 112
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee74b6637f7d14e80800000000000000
+      internalID: -8196032390067697682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SBMSGiantHead3_2
+      rect:
+        serializedVersion: 2
+        x: 1087
+        y: 1347
+        width: 106
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf585e892c030fc80800000000000000
+      internalID: -8291073301642115589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SBMSGiantHead3_3
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1000
+        width: 15
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1db11b0ce001fc1d0800000000000000
+      internalID: -3328423944055088175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SBMSGiantHead3_4
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 1014
+        width: 26
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e2ab474c84a9ecb0800000000000000
+      internalID: -4834151802607000855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SBMSGiantHead3_5
+      rect:
+        serializedVersion: 2
+        x: 1922
+        y: 1014
+        width: 28
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d05a481afe2240e0800000000000000
+      internalID: -2287214009066565424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SBMSGiantHead3_6
+      rect:
+        serializedVersion: 2
+        x: 1948
+        y: 1001
+        width: 15
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f626d77be6a29820800000000000000
+      internalID: 2923582638374921973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SBMSGiantHead3_7
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 875
+        width: 10
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32002dc6ed1a329e0800000000000000
+      internalID: -1647295062006955997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SBMSGiantHead3_8
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 892
+        width: 9
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98f5052eb82a92750800000000000000
+      internalID: 6280729877025939337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SBMSGiantHead3_9
+      rect:
+        serializedVersion: 2
+        x: 1868
+        y: 892
+        width: 9
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fb7d535dfa226b50800000000000000
+      internalID: 6584872872682814450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SBMSGiantHead3_10
+      rect:
+        serializedVersion: 2
+        x: 1897
+        y: 874
+        width: 15
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b6b0f7c36775fe80800000000000000
+      internalID: -8145473080589764941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SBMSGiantHead3_11
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 712
+        width: 15
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 148762154101f2920800000000000000
+      internalID: 2967608358907312193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SBMSGiantHead3_12
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 735
+        width: 17
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f575510048ab330c0800000000000000
+      internalID: -4597125718515296417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SBMSGiantHead3_13
+      rect:
+        serializedVersion: 2
+        x: 1880
+        y: 735
+        width: 17
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d70f2a72b1d5ac50800000000000000
+      internalID: 6675972587130914775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SBMSGiantHead3_14
+      rect:
+        serializedVersion: 2
+        x: 1924
+        y: 712
+        width: 16
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc65ecc283f3e7fd0800000000000000
+      internalID: -2342365245683640627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SBMSGiantHead3_15
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 633
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60575fe702625ab50800000000000000
+      internalID: 6603726349619524870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SBMSGiantHead3_16
+      rect:
+        serializedVersion: 2
+        x: 1839
+        y: 634
+        width: 6
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fec922e1debd80a40800000000000000
+      internalID: 5334755570079669487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SBMSGiantHead3_17
+      rect:
+        serializedVersion: 2
+        x: 1813
+        y: 391
+        width: 15
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 427ac84d760903450800000000000000
+      internalID: 6066507473690076964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SBMSGiantHead3_18
+      rect:
+        serializedVersion: 2
+        x: 1826
+        y: 410
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6afd3aeda115d7c0800000000000000
+      internalID: -4047309251465577874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

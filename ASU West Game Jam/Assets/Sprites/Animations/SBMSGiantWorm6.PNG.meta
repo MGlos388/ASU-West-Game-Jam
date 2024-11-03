@@ -1,0 +1,403 @@
+fileFormatVersion: 2
+guid: 8ddd809ae235b9f408452fe45de1224d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3156318385106235649
+    second: SBMSGiantWorm6_0
+  - first:
+      213: -5660164425160026598
+    second: SBMSGiantWorm6_1
+  - first:
+      213: 4071042671640987215
+    second: SBMSGiantWorm6_2
+  - first:
+      213: 3544750270002742969
+    second: SBMSGiantWorm6_3
+  - first:
+      213: -9206060090882453752
+    second: SBMSGiantWorm6_4
+  - first:
+      213: 655163965767810353
+    second: SBMSGiantWorm6_5
+  - first:
+      213: -2794775466188017976
+    second: SBMSGiantWorm6_6
+  - first:
+      213: -1723765040539691060
+    second: SBMSGiantWorm6_7
+  - first:
+      213: -8090931838708148066
+    second: SBMSGiantWorm6_8
+  - first:
+      213: 4906030977414870149
+    second: SBMSGiantWorm6_9
+  - first:
+      213: 1758216216372405648
+    second: SBMSGiantWorm6_10
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SBMSGiantWorm6_0
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 1545
+        width: 53
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 101ba4e29de7dcb20800000000000000
+      internalID: 3156318385106235649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SBMSGiantWorm6_1
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 1505
+        width: 107
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a169804b17e0371b0800000000000000
+      internalID: -5660164425160026598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SBMSGiantWorm6_2
+      rect:
+        serializedVersion: 2
+        x: 1065
+        y: 1571
+        width: 54
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f464e949dbf3f7830800000000000000
+      internalID: 4071042671640987215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SBMSGiantWorm6_3
+      rect:
+        serializedVersion: 2
+        x: 1125
+        y: 1477
+        width: 105
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b6cbf4f69b713130800000000000000
+      internalID: 3544750270002742969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SBMSGiantWorm6_4
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 1430
+        width: 30
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80f0d068f118d3080800000000000000
+      internalID: -9206060090882453752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SBMSGiantWorm6_5
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 27
+        width: 1942
+        height: 1489
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13df939d72c971900800000000000000
+      internalID: 655163965767810353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SBMSGiantWorm6_6
+      rect:
+        serializedVersion: 2
+        x: 2063
+        y: 1226
+        width: 30
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cee2e65586f639d0800000000000000
+      internalID: -2794775466188017976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SBMSGiantWorm6_7
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 132
+        width: 55
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc7156a14d4f318e0800000000000000
+      internalID: -1723765040539691060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SBMSGiantWorm6_8
+      rect:
+        serializedVersion: 2
+        x: 1579
+        y: 158
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9817eb3c5c37bf80800000000000000
+      internalID: -8090931838708148066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SBMSGiantWorm6_9
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 131
+        width: 12
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58430e14e29b51440800000000000000
+      internalID: 4906030977414870149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SBMSGiantWorm6_10
+      rect:
+        serializedVersion: 2
+        x: 867
+        y: 74
+        width: 71
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09565375550766810800000000000000
+      internalID: 1758216216372405648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      SBMSGiantWorm6_0: 3156318385106235649
+      SBMSGiantWorm6_1: -5660164425160026598
+      SBMSGiantWorm6_10: 1758216216372405648
+      SBMSGiantWorm6_2: 4071042671640987215
+      SBMSGiantWorm6_3: 3544750270002742969
+      SBMSGiantWorm6_4: -9206060090882453752
+      SBMSGiantWorm6_5: 655163965767810353
+      SBMSGiantWorm6_6: -2794775466188017976
+      SBMSGiantWorm6_7: -1723765040539691060
+      SBMSGiantWorm6_8: -8090931838708148066
+      SBMSGiantWorm6_9: 4906030977414870149
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
