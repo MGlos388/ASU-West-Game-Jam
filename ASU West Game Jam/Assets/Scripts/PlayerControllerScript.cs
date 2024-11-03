@@ -27,8 +27,18 @@ public class PlayerControllerScript : MonoBehaviour
 
     public int woodcount = 0;
 
+    private Animator animator;
+    private SpriteRenderer spriteRenderer;
+    private Vector2 movement;
+ 
     private void Start()
     {
+        // Reference to Animator and SpriteRenderer components
+        animator = transform.Find("SBMSPlayer1").GetComponent<Animator>();        
+        spriteRenderer = transform.Find("SBMSPlayer1").GetComponent<SpriteRenderer>();
+        // animator = GetComponent<Animator>();
+        // spriteRenderer = GetComponent<SpriteRenderer>();
+
         health = maxhealth;
         invincibilityTime_Elapsed = invincibilityTime;
     }
@@ -42,6 +52,24 @@ public class PlayerControllerScript : MonoBehaviour
 
 
         moveInput.Normalize();
+
+        // Flip the sprite based on horizontal movement
+        if (moveInput.x != 0)
+        {
+            spriteRenderer.flipX = moveInput.x < 0;
+        }
+
+        // Control animations based on movement
+        if (moveInput.magnitude  > 0)
+        {
+            // animator.SetBool("isMoving", true);
+            animator.enabled = true; // Enable animation when moving
+        }
+        else
+        {
+            // animator.SetBool("isMoving", false);
+            animator.enabled = false; // disable animation when moving
+        }
 
         Vector2 movetarget = moveInput * moveSpeed;
         if (running && health>0 && moveInput!=Vector2.zero) {
