@@ -43,7 +43,7 @@ public class PlayerControllerScript : MonoBehaviour
 
         moveInput.Normalize();
 
-        Vector2 movetarget = moveInput * moveSpeed * Time.deltaTime;
+        Vector2 movetarget = moveInput * moveSpeed;
         if (running && health>0 && moveInput!=Vector2.zero) {
             movetarget *= runSpeed;
             health -= sprintHealthDeduction;
