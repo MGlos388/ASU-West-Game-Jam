@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
     {
         HealthBar.maxValue = player.maxhealth;
         HealthBar.DOValue(player.health, 0.33f);
-        HealthBar_Text.text = player.health.ToString();
+        HealthBar_Text.text = player.health.ToString() + "/" + player.maxhealth.ToString();
     }
 
     public void UpdateWood() {
