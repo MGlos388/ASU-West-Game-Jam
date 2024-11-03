@@ -190,7 +190,7 @@ public class PlayerControllerScript : MonoBehaviour
             UpdateWood(1);
             Debug.Log("wood");
             coll.gameObject.GetComponent<AudioSource>().Play();
-            GameObject.Destroy(coll.gameObject);
+            GameObject.Destroy(coll.gameObject, 0.5f);
         }
     }
 

@@ -49398,6 +49398,10 @@ PrefabInstance:
       propertyPath: m_UsedByEffector
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5444487439522252006, guid: 549b84d69dfc775479edbe0c4acb85cc, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7888373936512150712, guid: 549b84d69dfc775479edbe0c4acb85cc, type: 3}
       propertyPath: m_Intensity
       value: 1
