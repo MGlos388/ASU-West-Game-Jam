@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class PickUpControllerScript : MonoBehaviour
 {
-    [SerializeField] GameObject player;
+    [SerializeField] public GameObject player;
 
     private bool collected = false;
     public float CollectionRange;

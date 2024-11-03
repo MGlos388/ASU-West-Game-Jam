@@ -25,6 +25,8 @@ public class PlayerControllerScript : MonoBehaviour
     public bool running;
     bool HurtingPlayer;
 
+    private int woodcount = 0;
+
     private void Start()
     {
         health = maxhealth;
@@ -73,6 +75,12 @@ public class PlayerControllerScript : MonoBehaviour
         if (coll.gameObject.CompareTag("Material"))
         {
             UpdateHealth(10);
+            Debug.Log("health");
+        }
+        if (coll.gameObject.CompareTag("Wood"))
+        {
+            UpdateWood(1);
+            Debug.Log("wood");
         }
     }
 
@@ -82,6 +90,11 @@ public class PlayerControllerScript : MonoBehaviour
             health = maxhealth;
         }
         UI.UpdateHealth();
+    }
+
+    public void UpdateWood(int w)
+    {
+        woodcount += w;
     }
 
 }
