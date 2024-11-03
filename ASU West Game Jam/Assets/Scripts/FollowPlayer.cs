@@ -23,6 +23,7 @@ public class EnemyFollowPlayer : MonoBehaviour
             }
         }
     }
+<<<<<<< Updated upstream
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -31,4 +32,7 @@ public class EnemyFollowPlayer : MonoBehaviour
             Destroy(gameObject);
         }
     }
+=======
+ 
+>>>>>>> Stashed changes
 }

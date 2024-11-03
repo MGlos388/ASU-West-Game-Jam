@@ -109,14 +109,36 @@ public class PlayerControllerScript : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D coll)
     {
+        Debug.Log("oncoll player w tag " + coll.gameObject.tag);
         if (!HurtingPlayer)
         {
-            if (coll.gameObject.CompareTag("Enemy") && invincibilityTime_Elapsed == invincibilityTime)
+            if (invincibilityTime_Elapsed == invincibilityTime)
             {
+<<<<<<< Updated upstream
                 UpdateHealth(-10);
                 HurtingPlayer = true;
                 PopUpNumber("-10");
             }
+=======
+                if (coll.gameObject.CompareTag("Enemy"))
+                {
+                    UpdateHealth(-10);
+                    HurtingPlayer = true;
+                } else if (coll.gameObject.CompareTag("Projectile"))
+                {
+                    Destroy(coll.gameObject); // for projectiles and mines, destroy them after a hit
+                    UpdateHealth(-5); //errors if no healthbar, destroy obj first
+                    HurtingPlayer = true;
+                }
+                else if (coll.gameObject.CompareTag("Mine")) 
+                {
+                    Destroy(coll.gameObject);
+                    UpdateHealth(-15);
+                    HurtingPlayer = true;        
+                }
+
+            }  
+>>>>>>> Stashed changes
         }
         if (coll.gameObject.CompareTag("Material"))
         {
