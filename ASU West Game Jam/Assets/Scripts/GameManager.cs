@@ -1,5 +1,6 @@
 using DG.Tweening;
 using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,18 +11,8 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI HealthBar_Text;
     public TextMeshProUGUI WoodValue_Text;
     PlayerControllerScript player;
-    public RectTransform MainMenu;
+    public AudioSource CantPickUpWood_SoundFX;
 
-    public void SetupGame()
-    {
-        StartCoroutine(SetupGame_Coro());
-    }
-    IEnumerator SetupGame_Coro()
-    {
-        MainMenu.DOScale(0, 0.5f);
-        yield return new WaitForSeconds(0.5f);
-        MainMenu.gameObject.SetActive(false);
-    }
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerControllerScript>();
@@ -36,6 +27,5 @@ public class GameManager : MonoBehaviour
 
     public void UpdateWood() {
         WoodValue_Text.text = player.woodcount.ToString();
-    
     }
 }
