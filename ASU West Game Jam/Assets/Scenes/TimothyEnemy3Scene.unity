@@ -297,6 +297,14 @@ PrefabInstance:
       propertyPath: startingAngleOffset
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 1533973946672982820, guid: e24b424fc81738740b768f160d5c62dd, type: 3}
+      propertyPath: maxmumFollowDistance
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1533973946672982820, guid: e24b424fc81738740b768f160d5c62dd, type: 3}
+      propertyPath: minimumFollowDistance
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 4670509149108779114, guid: e24b424fc81738740b768f160d5c62dd, type: 3}
       propertyPath: m_Name
       value: EnemyAdv
