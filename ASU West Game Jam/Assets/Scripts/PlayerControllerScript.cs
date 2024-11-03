@@ -15,6 +15,8 @@ public class PlayerControllerScript : MonoBehaviour
 
     private float health;
 
+    private float invincibilityFrames = 30;
+
     [SerializeField] Rigidbody2D rb;
 
     public Vector2 moveInput;
@@ -46,6 +48,21 @@ public class PlayerControllerScript : MonoBehaviour
         rb.linearVelocity = Vector2.Lerp(rb.linearVelocity,movetarget,lerpSpeed);
 
         Debug.Log(health);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Enemy" && invincibilityFrames < 0)
+        {
+            invincibilityFrames = 30;
+            health -= 10;
+
+
+        }
+        else {
+            invincibilityFrames -= Time.deltaTime;
+        }
+    
     }
 
     public void UpdateHealth(float h) {
