@@ -5,8 +5,8 @@ public class FollowPlayerAdvShoot : MonoBehaviour
 {
     private Transform player;      // Reference to the player's position
     public float speed = 2f;      // Speed at which the enemy follows
-    public float minimumFollowDistance = 1;
-    public float maxmumFollowDistance = 8; 
+    public float minimumFollowDistance = 0.6f;
+    public float maxmumFollowDistance = 12; 
     public float startingAngleOffset = 90f; // The angle offset to apply to the starting rotation
 
 
@@ -20,9 +20,12 @@ public class FollowPlayerAdvShoot : MonoBehaviour
         {
             // Calculate direction to the player
             Vector2 direction = (player.position - transform.position).normalized;
-
-            // Move the enemy towards the player
-            transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+ 
+            // Move towards the player
+            if (Vector2.Distance(transform.position, player.position) <= maxmumFollowDistance && Vector2.Distance(transform.position, player.position) >= minimumFollowDistance)
+            { 
+                transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+            } 
 
             // Calculate the angle to rotate towards the player
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
