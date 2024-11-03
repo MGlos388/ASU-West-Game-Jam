@@ -25,7 +25,7 @@ public class PlayerControllerScript : MonoBehaviour
     public bool running;
     bool HurtingPlayer;
 
-    private int woodcount = 0;
+    public int woodcount = 0;
 
     private void Start()
     {
@@ -76,11 +76,13 @@ public class PlayerControllerScript : MonoBehaviour
         {
             UpdateHealth(10);
             Debug.Log("health");
+            GameObject.Destroy(coll.gameObject);
         }
         if (coll.gameObject.CompareTag("Wood"))
         {
             UpdateWood(1);
             Debug.Log("wood");
+            GameObject.Destroy(coll.gameObject);
         }
     }
 
@@ -95,6 +97,8 @@ public class PlayerControllerScript : MonoBehaviour
     public void UpdateWood(int w)
     {
         woodcount += w;
+        UI.UpdateWood();
+
     }
 
 }
