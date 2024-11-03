@@ -1,3 +1,6 @@
+using NUnit.Framework;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class GiantControllerScript : MonoBehaviour
@@ -8,12 +11,15 @@ public class GiantControllerScript : MonoBehaviour
     [SerializeField] float movespeed;
     [SerializeField] float lerpamount;
 
+    List<GameObject> enemies;
+
     private float foodtimer = 0;
 
     private float targetAngle = 0;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        enemies = new List<GameObject>();
     }
 
     // Update is called once per frame
@@ -42,6 +48,16 @@ public class GiantControllerScript : MonoBehaviour
             gb.tag = "Material";
             gb.GetComponent<PickUpControllerScript>().player = GameObject.Find("Player");
             gb.transform.position = transform.position;
+        }
+
+
+        enemies.Clear();
+        enemies = GameObject.FindGameObjectsWithTag("Enemy").ToList<GameObject>();
+        foreach (GameObject gb in enemies)
+        {
+            if (Vector3.Distance(gb.transform.position, transform.position) < 10) {
+                gb.transform.position += (gb.transform.position - transform.position) / 100;
+            }
         }
     }
 }

@@ -48599,7 +48599,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 2146607934}
   target: {fileID: 1117326664}
-  food: {fileID: 6712800427832044317, guid: 099f82e1c9196a74ea8b42e4f709f27d, type: 3}
+  food: {fileID: 6712800427832044317, guid: 9ca5cb429638b524983faed434630228, type: 3}
   movespeed: 3
   lerpamount: 1
 --- !u!4 &2146607933

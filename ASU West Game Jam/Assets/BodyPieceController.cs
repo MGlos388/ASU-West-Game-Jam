@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class BodyPieceController : MonoBehaviour
@@ -6,11 +8,12 @@ public class BodyPieceController : MonoBehaviour
 
     [SerializeField] GameObject target;
     Rigidbody2D rb;
-
+    List<GameObject> enemies;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        enemies = new List<GameObject>();
     }
 
     // Update is called once per frame
@@ -40,6 +43,16 @@ public class BodyPieceController : MonoBehaviour
         else
         {
             
+        }
+
+        enemies.Clear();
+        enemies = GameObject.FindGameObjectsWithTag("Enemy").ToList<GameObject>();
+        foreach (GameObject gb in enemies)
+        {
+            if (Vector3.Distance(gb.transform.position, transform.position) < 10)
+            {
+                gb.transform.position += (gb.transform.position - transform.position) / 100;
+            }
         }
     }
 }
