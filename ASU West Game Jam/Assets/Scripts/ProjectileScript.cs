@@ -19,10 +19,4 @@ public class ProjectileScript : MonoBehaviour
         transform.Translate(Vector2.up * speed * Time.deltaTime);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        // Check for collisions with enemies or obstacles here
-        // Destroy projectile on collision
-        Destroy(gameObject);
-    }
 }
