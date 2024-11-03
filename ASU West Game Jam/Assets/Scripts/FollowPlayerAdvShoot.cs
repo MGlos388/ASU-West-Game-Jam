@@ -2,13 +2,19 @@
 using UnityEngine;
 
 public class FollowPlayerAdvShoot : MonoBehaviour
-{
+{ 
     private Transform player;      // Reference to the player's position
     public float speed = 2f;      // Speed at which the enemy follows
     public float minimumFollowDistance = 0.6f;
     public float maxmumFollowDistance = 12; 
     public float startingAngleOffset = 90f; // The angle offset to apply to the starting rotation
 
+    // Acid Blast Variables
+    public GameObject acidProjectilePrefab;  // Acid projectile prefab
+    public float spreadAngle = 15f;          // Angle between each projectile in the triple shot
+    public float shootCooldown = 5.5f;         // Cooldown time between each shot
+
+    private float lastShotTime = 0f;         // Track the time since the last shot
 
     public void Start()
     {
@@ -31,28 +37,31 @@ public class FollowPlayerAdvShoot : MonoBehaviour
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
             // Rotate the enemy sprite to face the player
-            //transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));            // Rotate the enemy sprite to face the player, adding the offset
             transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle + startingAngleOffset));
-        }
-    } 
-    // private void Update()
-    // { 
-    //     //ar rb 
-    //     UnityEngine.Vector2 direction = (UnityEngine.Vector2) player.position - (UnityEngine.Vector2)transform.position;
-    //     direction.Normalize();
-    //     float rotateAmount = UnityEngine.Vector3.Cross(direction, transform.up).z;
-    //     //rb.angularVelocity = -rotateAmount * RotateSpeed;
 
-    //     if (player != null)
-    //     {
-    //         // Move towards the player
-    //         if (UnityEngine.Vector2.Distance(transform.position, player.position) <= maxmumFollowDistance && UnityEngine.Vector2.Distance(transform.position, player.position) >= minimumFollowDistance)
-    //         {
-    //             UnityEngine.Vector2 direction = (player.position - transform.position).normalized;
-    //             transform.position = UnityEngine.Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
-    //         }
-    //     }
-    // }
+			// Shooting logic
+			if (Time.time > lastShotTime + shootCooldown)
+			{
+                Debug.Log("triple blast from adv enemy move");
+				ShootTripleBlast();
+				lastShotTime = Time.time;
+			}
+		}
+    }
+
+	void ShootTripleBlast()
+    {
+        // Fire three projectiles in a spread pattern
+        for (int i = -1; i <= 1; i++)
+        {
+            float angle = i * spreadAngle;
+            Quaternion rotation = Quaternion.Euler(0, 0, angle) * Quaternion.LookRotation(Vector3.forward, player.position - transform.position);
+            GameObject projectile = Instantiate(acidProjectilePrefab, transform.position, rotation);
+
+            // Set the projectile color to green if desired
+            projectile.GetComponent<SpriteRenderer>().color = Color.green;
+        }
+    }  
 
     private void OnCollisionEnter2D(Collision2D collision)
     {

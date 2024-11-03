@@ -127,3 +127,6 @@ MonoBehaviour:
   minimumFollowDistance: 1
   maxmumFollowDistance: 6
   startingAngleOffset: 90
+  acidProjectilePrefab: {fileID: 8741686733375940204, guid: 5feb1e5f8ebdadd42893861d53e85f07, type: 3}
+  spreadAngle: 15
+  shootCooldown: 5.5
