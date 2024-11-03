@@ -3,6 +3,9 @@ using UnityEngine;
 public class GiantControllerScript : MonoBehaviour
 {
     [SerializeField] Rigidbody2D rb;
+    [SerializeField] GameObject target;
+
+    private float targetAngle = 0;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -11,9 +14,12 @@ public class GiantControllerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rb.rotation += (Mathf.PerlinNoise(Time.time,124987)*2)-1f;
+        //rb.rotation += (Mathf.PerlinNoise(Time.time,12345))-.5f;
+
+        targetAngle = 180+(180/Mathf.PI)*(Mathf.Atan2(transform.position.y-target.transform.position.y, transform.position.x - target.transform.position.x));
 
 
+        rb.rotation = Mathf.LerpAngle(rb.rotation,targetAngle,.01f);
         float angle = (rb.rotation/ Mathf.Rad2Deg);
 
 
