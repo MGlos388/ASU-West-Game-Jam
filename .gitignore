@@ -87,3 +87,5 @@ crashlytics-build.properties
 ASU West Game Jam/obj/Debug/Assembly-CSharp.csproj.AssemblyReference.cache
 ASU West Game Jam/UserSettings/Layouts/default-6000.dwlt
 *.dwlt
+ASU West Game Jam/UserSettings/EditorUserSettings.asset
+ASU West Game Jam/ProjectSettings/EditorBuildSettings.asset

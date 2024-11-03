@@ -8,6 +8,8 @@ TagManager:
   - Material
   - Worm
   - Wood
+  - Mine
+  - Projectile
   layers:
   - Default
   - TransparentFX

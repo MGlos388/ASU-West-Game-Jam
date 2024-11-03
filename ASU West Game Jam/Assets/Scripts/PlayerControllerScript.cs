@@ -1,6 +1,8 @@
+using DG.Tweening;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class PlayerControllerScript : MonoBehaviour
@@ -15,6 +17,7 @@ public class PlayerControllerScript : MonoBehaviour
 
     public float health;
     public GameManager UI;
+    public GameObject PopUpPrefab;
 
     public float invincibilityTime;
     private float invincibilityTime_Elapsed;
@@ -89,7 +92,21 @@ public class PlayerControllerScript : MonoBehaviour
             }
         }
     }
-
+    public void PopUpNumber(string textToShow)
+    {
+        StartCoroutine(PopUpNumber_Coro(transform.position + new Vector3(0, 2), textToShow));
+    }
+    IEnumerator PopUpNumber_Coro(Vector2 position, string textToShow)
+    {
+        GameObject popup = Instantiate(PopUpPrefab, transform.position, Quaternion.identity);
+        popup.GetComponent<TextMeshPro>().text = textToShow;
+        yield return new WaitForEndOfFrame();
+        popup.GetComponent<TextMeshPro>().color = new Color32(255, 255, 255, 255);
+        popup.transform.DOMove(position, 0.33f).SetEase(Ease.OutExpo);
+        yield return new WaitForSeconds(0.5f);
+        popup.GetComponent<TextMeshPro>().DOFade(0, 0.15f);
+        Destroy(popup, 0.5f);
+    }
     private void OnTriggerEnter2D(Collider2D coll)
     {
         if (!HurtingPlayer)
@@ -98,6 +115,7 @@ public class PlayerControllerScript : MonoBehaviour
             {
                 UpdateHealth(-10);
                 HurtingPlayer = true;
+                PopUpNumber("-10");
             }
         }
         if (coll.gameObject.CompareTag("Material"))

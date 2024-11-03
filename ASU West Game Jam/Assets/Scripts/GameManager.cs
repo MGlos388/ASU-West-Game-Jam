@@ -12,10 +12,6 @@ public class GameManager : MonoBehaviour
     PlayerControllerScript player;
     public RectTransform MainMenu;
 
-    public void ExitGame()
-    {
-        Application.Quit();
-    }
     public void SetupGame()
     {
         StartCoroutine(SetupGame_Coro());
