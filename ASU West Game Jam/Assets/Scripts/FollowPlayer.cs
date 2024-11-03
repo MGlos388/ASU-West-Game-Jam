@@ -23,16 +23,4 @@ public class EnemyFollowPlayer : MonoBehaviour
             }
         }
     }
-<<<<<<< Updated upstream
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Worm")) //Assign the creature a tag based on its name
-        {
-            Destroy(gameObject);
-        }
-    }
-=======
- 
->>>>>>> Stashed changes
 }

@@ -33,11 +33,11 @@ public class PlayerControllerScript : MonoBehaviour
     private Animator animator;
     private SpriteRenderer spriteRenderer;
     private Vector2 movement;
- 
+
     private void Start()
     {
         // Reference to Animator and SpriteRenderer components
-        animator = transform.Find("SBMSPlayer1").GetComponent<Animator>();        
+        animator = transform.Find("SBMSPlayer1").GetComponent<Animator>();
         spriteRenderer = transform.Find("SBMSPlayer1").GetComponent<SpriteRenderer>();
         // animator = GetComponent<Animator>();
         // spriteRenderer = GetComponent<SpriteRenderer>();
@@ -63,7 +63,7 @@ public class PlayerControllerScript : MonoBehaviour
         }
 
         // Control animations based on movement
-        if (moveInput.magnitude  > 0)
+        if (moveInput.magnitude > 0)
         {
             // animator.SetBool("isMoving", true);
             animator.enabled = true; // Enable animation when moving
@@ -75,12 +75,13 @@ public class PlayerControllerScript : MonoBehaviour
         }
 
         Vector2 movetarget = moveInput * moveSpeed;
-        if (running && health>0 && moveInput!=Vector2.zero) {
+        if (running && health > 0 && moveInput != Vector2.zero)
+        {
             movetarget *= runSpeed;
             health -= sprintHealthDeduction;
-         }
+        }
 
-        rb.linearVelocity = Vector2.Lerp(rb.linearVelocity,movetarget,lerpSpeed);
+        rb.linearVelocity = Vector2.Lerp(rb.linearVelocity, movetarget, lerpSpeed);
 
         if (HurtingPlayer)
         {
@@ -114,31 +115,28 @@ public class PlayerControllerScript : MonoBehaviour
         {
             if (invincibilityTime_Elapsed == invincibilityTime)
             {
-<<<<<<< Updated upstream
-                UpdateHealth(-10);
-                HurtingPlayer = true;
-                PopUpNumber("-10");
-            }
-=======
                 if (coll.gameObject.CompareTag("Enemy"))
                 {
                     UpdateHealth(-10);
                     HurtingPlayer = true;
-                } else if (coll.gameObject.CompareTag("Projectile"))
+                    PopUpNumber("-10");
+                }
+                else if (coll.gameObject.CompareTag("Projectile"))
                 {
                     Destroy(coll.gameObject); // for projectiles and mines, destroy them after a hit
                     UpdateHealth(-5); //errors if no healthbar, destroy obj first
                     HurtingPlayer = true;
+                    PopUpNumber("-5");
                 }
-                else if (coll.gameObject.CompareTag("Mine")) 
+                else if (coll.gameObject.CompareTag("Mine"))
                 {
                     Destroy(coll.gameObject);
                     UpdateHealth(-15);
-                    HurtingPlayer = true;        
+                    HurtingPlayer = true;
+                    PopUpNumber("-15");
                 }
 
-            }  
->>>>>>> Stashed changes
+            }
         }
         if (coll.gameObject.CompareTag("Material"))
         {
@@ -154,9 +152,11 @@ public class PlayerControllerScript : MonoBehaviour
         }
     }
 
-    public void UpdateHealth(float h) {
+    public void UpdateHealth(float h)
+    {
         health += h;
-        if (health >= maxhealth) {
+        if (health >= maxhealth)
+        {
             health = maxhealth;
         }
         UI.UpdateHealth();
