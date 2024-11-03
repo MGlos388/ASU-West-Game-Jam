@@ -16,7 +16,7 @@ public class wormtargetController : MonoBehaviour
 
 
         if (Vector3.Distance(transform.position, target.transform.position) < 5) {
-            transform.position = Random.insideUnitCircle * 30;
+            transform.position = Random.insideUnitCircle * 50;
         }
 
 
