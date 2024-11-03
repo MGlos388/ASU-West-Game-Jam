@@ -9,22 +9,25 @@ public class PlayerControllerScript : MonoBehaviour
     [SerializeField] float lerpSpeed;
     [SerializeField] float runSpeed;
 
-    [SerializeField] float maxhealth;
+    public float maxhealth;
     [SerializeField] float maxwater;
     [SerializeField] float sprintHealthDeduction;
 
-    private float health;
+    public float health;
+    public Menu_Gameplay UI;
 
-    private float invincibilityFrames = 0;
+    private float invincibilityFrames = 30;
 
     [SerializeField] Rigidbody2D rb;
 
     public Vector2 moveInput;
     public bool running;
+    bool HurtingPlayer;
 
     private void Start()
     {
         health = maxhealth;
+        invincibilityFrames = 0.6f;
     }
 
     private void Update()
@@ -41,29 +44,33 @@ public class PlayerControllerScript : MonoBehaviour
         if (running && health>0 && moveInput!=Vector2.zero) {
             movetarget *= runSpeed;
             health -= sprintHealthDeduction;
-
-
          }
 
         rb.linearVelocity = Vector2.Lerp(rb.linearVelocity,movetarget,lerpSpeed);
 
+        if (HurtingPlayer)
+        {
+            invincibilityFrames -= Time.deltaTime;
+            if (invincibilityFrames <= 0)
+            {
+                HurtingPlayer = false;
+                invincibilityFrames = 0.6f;
+            }
+        }
         Debug.Log(health);
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("you collided entered");
-        if (collision.gameObject.tag == "Enemy" && invincibilityFrames <= 0)
+        if (!HurtingPlayer)
         {
-            invincibilityFrames = 30;
-            health -= 10;
-
-
-        }
-        else {
-            invincibilityFrames -= Time.deltaTime;
-        }
-    
+            if (collision.gameObject.CompareTag("Enemy") && invincibilityFrames == 0.6f)
+            {
+                UI.UpdateHealth();
+                health -= 10;
+                HurtingPlayer = true;
+            }
+        }  
     }
 
     public void UpdateHealth(float h) {

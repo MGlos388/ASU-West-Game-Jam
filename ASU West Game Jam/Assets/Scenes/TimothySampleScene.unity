@@ -694,6 +694,10 @@ PrefabInstance:
       value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1000864527152283007, guid: 549b84d69dfc775479edbe0c4acb85cc, type: 3}
+      propertyPath: moveSpeed
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000864527152283007, guid: 549b84d69dfc775479edbe0c4acb85cc, type: 3}
       propertyPath: sprintWaterDeduction
       value: 0.05
       objectReference: {fileID: 0}

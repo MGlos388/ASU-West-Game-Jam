@@ -5,6 +5,10 @@ public class EnemyFollowPlayer : MonoBehaviour
     public Transform player;      // Reference to the player's position
     public float speed = 2f;      // Speed at which the enemy follows
 
+    public void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+    }
     private void Update()
     {
         if (player != null)

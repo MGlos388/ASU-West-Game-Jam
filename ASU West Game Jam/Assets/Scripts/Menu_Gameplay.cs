@@ -6,7 +6,7 @@ public class Menu_Gameplay : MonoBehaviour
 {
     [Header("Incorporate Into Gameplay")]
     public Slider HealthBar;
-    Player_Test player;
+    PlayerControllerScript player;
 
     [Header("Menu Stuff")]
     public bool Paused;
@@ -33,19 +33,12 @@ public class Menu_Gameplay : MonoBehaviour
     }
     void Start()
     {
-        player = GetComponent<Player_Test>();
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerControllerScript>();
         CanOpenAMenu = true;
-    }
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            UpdateHealth();
-        }
     }
     public void UpdateHealth()
     {
-        HealthBar.maxValue = player.MaxHealth;
-        HealthBar.DOValue(player.Health, 0.33f);
+        HealthBar.maxValue = player.maxhealth;
+        HealthBar.DOValue(player.health, 0.33f);
     }
 }
