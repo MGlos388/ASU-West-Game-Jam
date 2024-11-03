@@ -66,18 +66,22 @@ public class PlayerControllerScript : MonoBehaviour
         {
             if (coll.gameObject.CompareTag("Enemy") && invincibilityTime_Elapsed == invincibilityTime)
             {
-                UI.UpdateHealth();
-                health -= 10;
+                UpdateHealth(-10);
                 HurtingPlayer = true;
             }
+        }
+        if (coll.gameObject.CompareTag("Material"))
+        {
+            UpdateHealth(10);
         }
     }
 
     public void UpdateHealth(float h) {
         health += h;
-        if (health>=maxhealth) {
+        if (health >= maxhealth) {
             health = maxhealth;
         }
+        UI.UpdateHealth();
     }
 
 }

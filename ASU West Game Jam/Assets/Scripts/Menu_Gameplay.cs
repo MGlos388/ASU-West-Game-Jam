@@ -1,11 +1,13 @@
+using DG.Tweening;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using DG.Tweening;
 
 public class Menu_Gameplay : MonoBehaviour
 {
     [Header("Incorporate Into Gameplay")]
     public Slider HealthBar;
+    public TextMeshProUGUI HealthBar_Text;
     PlayerControllerScript player;
 
     [Header("Menu Stuff")]
@@ -40,5 +42,6 @@ public class Menu_Gameplay : MonoBehaviour
     {
         HealthBar.maxValue = player.maxhealth;
         HealthBar.DOValue(player.health, 0.33f);
+        HealthBar_Text.text = player.health.ToString();
     }
 }
