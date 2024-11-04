@@ -197,7 +197,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SBMSBrokeRaft_0: 937115076059450489
+      SBMSBrokeRaft_1: 7233307688876661954
+      SBMSBrokeRaft_2: 5610705265988847897
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
