@@ -8,6 +8,8 @@ using UnityEngine.SceneManagement;
 public class RaftManager : MonoBehaviour
 {
     [SerializeField] GameObject displaypanel;
+    [SerializeField] GameObject broken;
+    [SerializeField] GameObject fixedobj;
     [SerializeField] GameObject woodcountdisplay;
 
     GameObject player;
@@ -20,6 +22,8 @@ public class RaftManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        broken.SetActive(true);
+        fixedobj.SetActive(false);
         targetScale = displaypanel.transform.localScale;
         player = GameObject.Find("Player");
         woodreq = Random.Range(10,20);
@@ -62,7 +66,10 @@ public class RaftManager : MonoBehaviour
                 {
                     player.GetComponent<PlayerControllerScript>().woodcount-=woodreq;
                     raftbuilt = true;
+                    broken.SetActive(false);
+                    fixedobj.SetActive(true);
                     GetComponentInChildren<BoxCollider2D>().enabled = false;
+                    
                     Debug.Log("you win");
                     //SceneManager.LoadScene("EndScene");
 
