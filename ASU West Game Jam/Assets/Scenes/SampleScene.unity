@@ -25492,7 +25492,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 620.2, y: 335.7}
+  m_SizeDelta: {x: 924.3, y: 335.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1059110680
 MonoBehaviour:
@@ -25516,8 +25516,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: You Died
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a2f095078d10f24468ee7cfdc2edd7c7, type: 2}
+  m_sharedMaterial: {fileID: 7253534879307059960, guid: a2f095078d10f24468ee7cfdc2edd7c7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -25541,8 +25541,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 133.23
-  m_fontSizeBase: 133.23
+  m_fontSize: 103.4
+  m_fontSizeBase: 103.4
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -36680,8 +36680,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 100
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a2f095078d10f24468ee7cfdc2edd7c7, type: 2}
+  m_sharedMaterial: {fileID: 7253534879307059960, guid: a2f095078d10f24468ee7cfdc2edd7c7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -45439,8 +45439,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a2f095078d10f24468ee7cfdc2edd7c7, type: 2}
+  m_sharedMaterial: {fileID: 7253534879307059960, guid: a2f095078d10f24468ee7cfdc2edd7c7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -48247,7 +48247,7 @@ RectTransform:
   m_GameObject: {fileID: 2089650739}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 1.5, z: 1}
+  m_LocalScale: {x: 1, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1521445394}
