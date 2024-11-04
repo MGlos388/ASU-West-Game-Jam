@@ -25,6 +25,7 @@ public class PlayerControllerScript : MonoBehaviour
     private float invincibilityTime_Elapsed;
 
     [SerializeField] Rigidbody2D rb;
+    public AudioSource AcidHit;
 
     public Vector2 moveInput;
     public bool running;
@@ -165,15 +166,12 @@ public class PlayerControllerScript : MonoBehaviour
                     Destroy(coll.gameObject); // for projectiles and mines, destroy them after a hit
                     UpdateHealth(-5); //errors if no healthbar, destroy obj first
                     HurtingPlayer = true;
+                    AcidHit.Play();
                     PopUpNumber("-5");
                 }
                 else if (coll.gameObject.CompareTag("Mine"))
                 {
-                    spriteRenderer.color = Color.red;
-                    Destroy(coll.gameObject);
-                    UpdateHealth(-15);
-                    HurtingPlayer = true;
-                    PopUpNumber("-15");
+                    StartCoroutine(CollideWithMine(coll.gameObject));
                 }
 
             }
@@ -193,7 +191,17 @@ public class PlayerControllerScript : MonoBehaviour
             GameObject.Destroy(coll.gameObject, 0.5f);
         }
     }
-
+    IEnumerator CollideWithMine(GameObject other)
+    {
+        other.GetComponent<AudioSource>().Play();
+        spriteRenderer.color = Color.red;
+        UpdateHealth(-15);
+        PopUpNumber("-15");
+        other.GetComponent<SpriteRenderer>().DOFade(0, 0.25f);
+        HurtingPlayer = true;
+        yield return new WaitForSeconds(0.5f);
+        Destroy(other);
+    }
     public void UpdateHealth(float h)
     {
         health += h;
