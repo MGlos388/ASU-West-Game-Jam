@@ -308,7 +308,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Eoghanodom
+  m_text: Eoghan odom
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a2f095078d10f24468ee7cfdc2edd7c7, type: 2}
   m_sharedMaterial: {fileID: 7253534879307059960, guid: a2f095078d10f24468ee7cfdc2edd7c7, type: 2}
@@ -5867,7 +5867,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5396226, g: 0.37054813, b: 0.24741183, a: 1}
+  m_Color: {r: 0.18490559, g: 0.18490559, b: 0.18490559, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
